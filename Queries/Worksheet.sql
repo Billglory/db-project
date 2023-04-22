@@ -138,3 +138,33 @@ select count (*) from employees where manager_id = 100;
 
 select * from employees where salary < 10000;
 select count (*) from employees where salary < 10000;
+
+/*Group By/Having*/
+
+select job_id from employees group by job_id;
+
+select job_id, count(*) from employees group by job_id;
+
+select job_id, max(salary) from employees group by job_id;
+
+select job_id, min(salary) from employees group by job_id;
+
+select job_id, sum(salary) from employees group by job_id;
+
+/*having*/
+select job_id from employees group by job_id having max(salary) > 2000;
+
+select job_id, count(*) from employees group by job_id having max(salary) > 2000;
+
+select job_id from employees group by job_id having avg(salary) > 6000;
+
+select job_id, count(*) from employees group by job_id having avg(salary) > 6000;
+
+select job_id from employees group by job_id having min(salary) > 6000;
+
+select job_id, count(*) from employees group by job_id having min(salary) > 6000;
+
+/*Aliases:Table/Column*/
+
+
+
