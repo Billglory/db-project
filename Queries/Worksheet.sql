@@ -166,5 +166,27 @@ select job_id, count(*) from employees group by job_id having min(salary) > 6000
 
 /*Aliases:Table/Column*/
 
+select first_name as " " from employees;
+
+select first_name as " Given Name " from employees;
+
+select first_name || ' ' last_name from employees;
+
+select first_name || ' ' || last_name as "Full Name " from employees;
+
+
+select concat(email, '@gmail.com') from employees;
+
+select concat(email, '@gmail.com') as "Email Address" from employees;
+
+
+select * from employees, job_history;
+
+select employees.employee_id, job_history.job_id from employees, job_history;
+
+select e.employee_id, j.job_id from employees e, job_history j;
+
+/*Views/Create.insert*/
+
 
 
