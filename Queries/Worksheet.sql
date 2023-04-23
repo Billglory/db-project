@@ -188,5 +188,22 @@ select e.employee_id, j.job_id from employees e, job_history j;
 
 /*Views/Create.insert*/
 
+select * from employees;
+select last_name ||' '||first_name as FullName from employees;
 
+create view EmployeeInfo as select last_name ||' '||first_name as FullName from employees;
 
+select * from EmployeeInfo;
+
+select last_name ||' '||first_name as FullName  ,
+  lower(email || '@cybertek.com' ) as Email
+from employees;
+
+create or replace view EmployeeInfo as
+select last_name ||' '||first_name as FullName ,
+       lower(email || '@cybertek.com' ) as Email
+from employees;
+
+select * from EmployeeInfo;
+
+drop view EmployeeInfo;
